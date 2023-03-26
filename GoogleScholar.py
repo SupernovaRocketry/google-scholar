@@ -9,7 +9,7 @@ import selenium.webdriver.support.expected_conditions as EC
 from time import sleep
 from datetime import date
 
-
+#Opções
 options = Options()
 options.add_experimental_option("detach", True)
 
