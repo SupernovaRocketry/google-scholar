@@ -1,5 +1,5 @@
+#Importando bibliotecas
 import requests
-from bs4 import BeautifulSoup
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
@@ -9,8 +9,6 @@ import selenium.webdriver.support.expected_conditions as EC
 from time import sleep
 from datetime import date
 
-
-#################################################################################################################################################################################
 
 options = Options()
 options.add_experimental_option("detach", True)
