@@ -125,7 +125,7 @@ print(lista)
 
 import xlsxwriter     
       
-book = xlsxwriter.Workbook('C:\\Users\\rafae\\Downloads\\Google Scholar.xlsx')     
+book = xlsxwriter.Workbook('')     
 sheet = book.add_worksheet()  
    
 
