@@ -28,10 +28,6 @@ print(numero_de_resultados)
 print("\n")
 
 
-#resultado = navegador.find_element(By.XPATH, '//*[@id="xjg4xek6VJUJ"]').text
-
-#print(resultado)
-
 navegador.execute_script("arguments[0].setAttribute('class', 'gs_cb_gen gs_in_cb')", WebDriverWait(navegador, 20).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gs_bdy_sb_in"]/ul[4]/li[2]/a'))))
 navegador.execute_script("arguments[0].setAttribute('aria-checked', 'false')", WebDriverWait(navegador, 20).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gs_bdy_sb_in"]/ul[4]/li[2]/a'))))
 navegador.execute_script("arguments[0].setAttribute('data-s', '0')", WebDriverWait(navegador, 20).until(EC.presence_of_element_located((By.XPATH, '//*[@id="gs_bdy_sb_in"]/ul[4]/li[2]/a'))))
@@ -52,16 +48,13 @@ print(numero_de_resultados_2.split(" ")[1])
 print("\n")
 
 numero_de_artigos = navegador.find_elements(By.CLASS_NAME, 'gs_or')
-print("esse é o numero de artigos:")
+print("Número de artigos:")
 print(len(numero_de_artigos))
 print("\n")
 
 
 loops = int(int(numero_de_resultados_2.split(" ")[1])/10) 
 
-print("\n")
-print(loops)
-print("\n")
 
 
 j = 1
@@ -107,8 +100,6 @@ while(elemento):
     print(link)
     print("\n")
 
-    print("esse é o j")
-    print(j)
     
     next_page = link_splited[0] + 'start=' + str((j)*10) + link_splited[1] + '&as_vis=1'
 
@@ -116,14 +107,13 @@ while(elemento):
     
     navegador.get(next_page)
 
-    print("PASSEI AQUI")
     j = j + 1
 
 print(lista)
 
 import xlsxwriter     
       
-book = xlsxwriter.Workbook('')     
+book = xlsxwriter.Workbook('GoogleScholar')     
 sheet = book.add_worksheet()  
    
 
